@@ -1,0 +1,123 @@
+---
+
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+---
+<html lang="en">
+    <head>
+		<MainHead title="Nicolette's Experience" description="Nicolette's skills & work experience" />
+	</head>
+    <body>
+        <Nav/>
+        <section class="about">
+           <div class="about__inner wrapper" >
+                <h3 class="experience__title text-align-center">
+                    About me
+                </h3>
+                <div class="about__general">
+                    <img class="about__image" src="/nicolette.png">
+                    <p class="about__text">Hello! My name is Nicolette ( or Nikki for short ), I'm a frontend developer living and working (remotely) in Stuttgart, Germany.</p>
+                    <p class="about__text">I've always had an interest in technology and started to become curious about coding in 2006 when I learned a little about it in school.</p>
+                    <p class="about__text">I started an apprenticeship to become a software developer in 2008, since finishing my apprenticeship I worked as a frontend developer both in Australia and Germany. </p>
+                    <p class="about__text">In my spare time I like to read books, play video games, listen to music, build Lego and go roller skating.</p>
+                </div>
+                <h3 class="experience__title text-align-center">
+                    Get in touch
+                </h3>
+                <div class="about__contact box-flex  align-center justify-center flex-column">
+                    <p class="contact__text"> If you want to get in touch with me the easiest way is to send an email.</p>
+                    <a class="contact__link" href="mailto:nikki.kuhnke@gmail.com" target="_blank">Say hello</a>
+                </div>
+                <h3 class="experience__title text-align-center">
+                    Social
+                </h3>
+                <div class="about__social box-flex align-center justify-center">
+                    <div class="social__item">
+                        <a href="https://github.com/nicolette-kuhnke" target="_blank" aria-label="GitHub">
+                            <svg id="svgGithub" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </div>
+                </div>
+           </div>
+        </section>
+        <Footer/>
+    </body>
+</html>
+
+<style lang="scss">
+
+    a {
+        text-decoration: none; 
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    .about {
+
+        min-height: 100vh;
+        position: relative;
+
+        &__inner {
+            margin-top: 14rem;
+        }
+
+        &__title {
+            margin-top: 8rem;
+            margin-bottom: 3rem;
+        }
+    
+        &__image {
+            position: relative;
+            float: left; 
+            width: 25rem;
+            shape-outside:circle();
+            margin-right: 5rem; 
+        }
+
+	}
+
+    .contact {
+
+        &__text {
+            margin-top: 2rem;  
+        }
+
+        &__link {
+            margin: 2rem 0rem; 
+            font-size: var(--large-font-size);
+            color: var(--color-primary);
+            border: 0.4rem solid var(--color-primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 1rem;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: all 1s;
+            }
+        }
+
+
+    }
+
+    .social {
+
+        &__item {
+            padding: 1rem;
+        }
+
+    }
+
+    .social__item:hover {
+        transform: translate(0,-0.7rem);
+        transition: all 1s;
+    }
+
+    #svgGithub:hover {
+        color: var(--color-primary);
+    }
+
+</style>

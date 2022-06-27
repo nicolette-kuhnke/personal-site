@@ -1,0 +1,12 @@
+---
+import '../styles/global.scss';
+const { title = "Nicolette's Blog", description = "The personal site of Nicolette" } = Astro.props;
+---
+<meta charset="UTF-8"/>
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<title>{title}</title>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico:300,400,400i">

@@ -1,0 +1,43 @@
+---
+
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+const projects = await Astro.glob('../projects/*.md');
+
+---
+
+<html lang="en">
+    <head>
+		<MainHead title="Projects Nicolette worked on" description="A couple of projects that Nicolette has worked on in the past." />
+	</head>
+    <body>
+        <Nav/>
+        <section class="projects">
+            <div class="projects__inner wrapper">
+                <ul>
+                    {
+                        projects.map( project => <li> {project.frontmatter.title} </li> )
+                    }
+                </ul>
+            </div>
+        </section>
+        <Footer/>
+    </body>
+</html>
+
+<style lang="scss">
+
+    .projects {
+        
+        min-height: 100vh;
+		position: relative;
+
+        &__inner {
+            margin-top: 14rem;
+        }
+
+    }
+
+</style>

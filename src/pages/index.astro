@@ -1,0 +1,61 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+<html lang="en">
+	<head>
+		<MainHead title="Nicolette's Blog" description="The private blog of Nicolette." />
+		<style lang="scss">
+
+			.main-content {
+				position: relative;
+			}
+
+			.hero{
+				min-height: 100vh;
+				background: linear-gradient(45deg,var(--color-light) 70%,var(--color-primary) 30%);
+
+				&__content {
+					max-width: 45vw;
+				}
+
+				&__title {
+					color: var(--color-primary);
+					font-size: var(--large-font-size);
+					font-family: var(--font-special);
+
+					@media ( max-width: 1200px ) {
+                		color: var(--color-secondary);
+            		}
+
+				}
+
+				&__text {
+
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<Nav/>
+		<main class="main-content">
+			<section class="hero box-flex align-center justify-center">
+				<div class="hero__inner wrapper ">
+					<div class="hero__content">
+						<p class="hero__title">
+							Hello, my name is Nikki.
+						</p>
+						<h1 class="hero__text">
+							I'm a german frontend developer. 
+							<br>
+							I enjoy most things technology related.
+						</h1>
+					</div>
+				</div>
+			</section>	
+		</main>
+		<Footer/>
+	</body>
+</html>

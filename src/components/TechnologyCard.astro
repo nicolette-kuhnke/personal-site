@@ -1,0 +1,55 @@
+---
+const { title , listItems } = Astro.props;
+---
+<div class="technology">
+    <div class="technology__card">
+        <h4 class="technology__title text-align-center">{title}</h4>
+        <ul class="technology__list" role="list">
+           {
+            listItems.map( (language) => (
+                <li>{language}</li>
+            ))
+           }
+        </ul>
+    </div>
+</div>
+
+<style lang="scss">
+
+    ul {
+
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: square;
+            list-style-position: inside;
+            padding: .8rem 1.5rem;
+
+            &::marker {
+                color: var(--color-primary); 
+            }
+        }
+
+    }
+
+    .technology {
+
+        margin: 2rem 0rem;
+
+        &__card {
+            min-width: 10rem;
+            max-width: 30rem;
+            border: 6px solid var(--color-primary);
+            border-radius: 1rem;
+        }
+
+        &__title {
+            padding: 1rem 2rem;
+            background-color: var(--color-primary);
+            color: var(--color-light);
+        }
+
+    }
+
+</style>
